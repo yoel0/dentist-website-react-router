@@ -11,6 +11,7 @@ import {
 import Home from './Home';
 import Procedures from './Procedures';
 import Contact from './Contact';
+import WidgetShow from './WidgetShow';
 
 function App() {
   const procedures = [
@@ -31,8 +32,9 @@ function App() {
         <Link to="/contact">Contact us!</Link>{' '}
       </nav>
         <Route exact path="/" component={Home} />
-        <Route path="/procedures" render={()=> <Procedures procedures={procedures} />} />
+        <Route path="/procedures" render={()=> <Procedures procedures={procedures} /> } />
         <Route path="/contact" component={Contact} />
+        <Route path="/widgets/:id" render={(props) => <WidgetShow procedures={procedures} {...props} />} />
       </div>
     </Router>
   );
