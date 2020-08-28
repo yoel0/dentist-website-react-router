@@ -7,7 +7,7 @@ class Home extends Component {
         <h1>Annalissa Dentistry</h1>
         <p>Where the dentists go for their dental needs.</p>
       </div>
-    )
+    );
   }
 }
 
